@@ -16,3 +16,29 @@ jobs:
       - name: run a linux command
         run: ls -la
         
+  development:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: run a linux command
+        run: cat index.html
+
+  staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: run a linux command
+        run: ls -la    
+
+  production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: run a linux command
+        run: cat index.html
